@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/TB-logo - White Transparant.png" type="image/png">
+        <title>Tjerk Bakker</title>
+    </head>
+
+    <body>
+        
+        <nav>
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="images/TB-logo - Transparant.png" alt="TB Logo"></a>
+                    <h1>Tjerk Bakker</h1>
+                </div>
+                <div class="nav-menu">
+                    <a href="#main"><b>Home</b></a>
+                    <a href="#about"><b>About me</b></a>
+                </div>
+                <div class="nav-socials">
+                    <a href="https://www.instagram.com/tjerkbakker/" target="_blank"><img src="svg/instagram-svgrepo-com.svg" alt="Instragram"></a>
+                    <a href="https://github.com/Tjerk-Bakker" target="_blank"><img src="svg/github-142-svgrepo-com.svg" alt="GitHub"></a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <div class="main-content" id="main">
+                <div class="main-intro">
+                    <div class="intro-tekst">
+                        <h1>Website Maker</h1>
+                        <p>Building website's for <b>fun</b> to <b>learn</b> and <b>improve</b> myself</p>
+                    </div>
+                    <img src="images/Website-Profile.JPG" alt="Profiel-Foto">
+                </div>
+            </div>
+
+            <div class="second-content" id="about">
+                <div class="second-alt-content">
+                    <div class="about-left">
+                        <h1>About me</h1>
+                        <br>
+                        <p>My name is Tjerk Bakker and I live in Alblasserdam. I enjoy gaming, watching movies, and listening to music. I started an education in Software Development, something I had always felt inspired to pursue. However, things didn’t go entirely as planned. While studying, I discovered that it wasn’t really for me. Sitting still for hours, staring at a screen, and typing all day just didn’t suit me. So, I decided to quit and switch to an education in Electrical Engineering, specializing as a First Mechanic. I chose this path because I believe it suits me better, being active throughout the day while still working with technology.</p>
+                    </div>
+                    <div class="about-right">
+                        <h1>Information</h1>
+                        <br>
+                        <ul>
+                            <li><b>Name:</b> <p>Tjerk Bakker</p></li> <hr>
+                            <li><b>Born:</b> <p>22-11-2007</p></li> <hr>
+                            <li><b>Place of residence:</b> <p>Alblasserdam</p></li> <hr>
+                            <li><b>Studying for:</b> <p>Electrician</p></li> <hr>
+                            <li><b>Hobby's:</b> <p>Gaming <br> Watching movies <br> Listening to music <br> Being with friends</p></li> <hr>
+                            <li><b>Why this website:</b> <p>I'm just doing this because I like it.</p></li> <hr>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Tjerk Bakker. All rights reserved.</p>
+                <p>Website made by <a href="https://github.com/Tjerk-Bakker" target="_blank">Tjerk Bakker</a></p>
+            </div>
+        </footer>
+
+        <script>
+            // Dit zorgt ervoor dat bij het laden van de pagina de #hash uit de URL verdwijnt
+            // en de pagina naar de top springt als die door een hash-link geactiveerd was.
+            window.addEventListener('DOMContentLoaded', () => {
+                if (window.location.hash) {
+                // Verwijder de hash uit de URL zonder de pagina opnieuw te laden
+                history.replaceState('', document.title, window.location.pathname + window.location.search);
+                
+                // Scrol expliciet naar de top, voor het geval de browser al gesprongen was
+                window.scrollTo(0, 0); 
+                }
+            });
+
+            // Dit zorgt ervoor dat de pagina altijd naar de top springt,
+            // zelfs als je handmatig gescrold hebt en dan refresht.
+            window.addEventListener('beforeunload', () => {
+                // Stel de scrollpositie in op de top voordat de pagina ontladen wordt
+                window.scrollTo(0, 0);
+            });
+            
+            // Een extra zekerheid voor het geval 'beforeunload' niet voldoende was
+            window.addEventListener('load', () => {
+                // Scrol opnieuw naar de top zodra de pagina volledig geladen is
+                window.scrollTo(0, 0);
+            });
+        </script>
+
+    </body>
+
+</html>
